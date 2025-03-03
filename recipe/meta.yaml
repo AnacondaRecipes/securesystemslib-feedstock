@@ -10,8 +10,7 @@ source:
   sha256: 6a769e4816921ac4059c8c149ab5f69ed7cd92859857f0e17b67a3dd7bbee866
 
 build:
-  noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vv
   number: 0
 
 requirements:
@@ -33,10 +32,15 @@ test:
 about:
   home: https://github.com/secure-systems-lab/securesystemslib
   license: MIT AND CC0-1.0
+  license_family: MIT
+  description: |
+    A library that provides cryptographic and general-purpose routines for Secure Systems Lab projects at NYU
   license_file:
     - LICENSE
     - securesystemslib/_vendor/ed25519/LICENSE
   summary: A library that provides cryptographic and general-purpose routines for Secure Systems Lab projects at NYU
+  doc_url: https://github.com/secure-systems-lab/securesystemslib/tree/main/docs
+  dev_url: https://github.com/secure-systems-lab/securesystemslib
 
 extra:
   recipe-maintainers:
