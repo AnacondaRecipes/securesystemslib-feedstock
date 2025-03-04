@@ -20,6 +20,11 @@ requirements:
     - pip
   run:
     - python
+  run_constrained:
+    - cryptography >=40.0.0
+    - pynacl >1.2.0
+    - pyspx >=0.5.0
+    - sigstore >=2,<3
 
 test:
   imports:
